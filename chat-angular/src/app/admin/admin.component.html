@@ -1,0 +1,21 @@
+<div style="text-align:center">
+  <h1>
+    Welcome Admin!
+  </h1>
+  <p>
+    <button (click)="logout()">
+      Logout
+    </button>
+  </p>
+ 
+ <nav>
+  <a (click)="toggleEditor('user')">User Details</a>
+  <a (click)="toggleEditor('groups')">Group Details</a>
+  <a (click)="toggleEditor('message')">Message Details</a>
+  <a (click)="toggleEditor('chatkit')">Chat</a>
+ </nav>
+<app-user *ngIf="showUser"></app-user>
+<app-groups *ngIf="showGroups"></app-groups>
+<app-message *ngIf="showMessage"></app-message>
+<app-chatkit *ngIf="showChatkit"></app-chatkit>
+</div>
